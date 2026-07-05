@@ -539,6 +539,12 @@ body {
   gap: 1.25rem;
 }
 
+a.social-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .social-card {
   padding: 2rem 1.5rem;
   background: var(--bg-card);
@@ -582,17 +588,32 @@ body {
   margin-bottom: 1rem;
 }
 
-.coming-soon {
+.coming-soon,
+.social-link {
   display: inline-block;
   padding: 0.3rem 0.75rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border);
   border-radius: 100px;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.coming-soon {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
   color: var(--text-muted);
+}
+
+.social-link {
+  background: var(--accent-glow);
+  border: 1px solid rgba(0, 255, 159, 0.3);
+  color: var(--accent);
+}
+
+.social-card:hover .social-link {
+  background: var(--accent);
+  color: var(--bg);
 }
 
 /* Contact */
