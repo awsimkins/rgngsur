@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rg Ng Sur — Creator · Music · DIY</title>
-  <meta name="description" content="Official website of Rg Ng Sur — Filipino creator, DIY builder, and recording artist. Chainsaw motorcycles, viral garage builds, and new music including Camera Rolling on Spoken Devotion Music.">
-  <meta property="og:title" content="Rg Ng Sur — Official Website">
-  <meta property="og:description" content="Filipino creator and artist. Wild DIY builds, chainsaw motorcycles, and new music — Camera Rolling out now.">
+  <title>Rg Ng Sur — Official Site | Music, Builds &amp; Vlogs</title>
+  <meta name="description" content="Official site of Rg Ng Sur — Filipino creator, DIY builder, and artist behind viral chainsaw motorcycle builds. Stream Camera Rolling, watch featured videos, vote on what's next, and follow on social.">
+  <meta property="og:title" content="Rg Ng Sur — Official Site">
+  <meta property="og:description" content="Music, wild DIY builds, chainsaw motorcycles, and viral content. Vote on what's next — more music, vlogs, or merch. Camera Rolling out now.">
   <meta property="og:url" content="https://rgngsur.com">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://rgngsur.com/images/camera_rolling_image.jpg">
@@ -27,6 +27,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#videos">Videos</a></li>
       <li><a href="#music">Music</a></li>
+      <li><a href="#vote">Vote</a></li>
       <li><a href="#social">Social</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -37,10 +38,10 @@
     <div class="hero-content">
       <div class="hero-badge">Creator · Builder · Artist</div>
       <h1 class="hero-title">RG NG<br><span>SUR</span></h1>
-      <p class="hero-tagline">Filipino creator, builder, and artist. Wild DIY builds, viral garage content, and music that keeps the camera rolling.</p>
+      <p class="hero-tagline">Official home of Rg Ng Sur — chainsaw builds, viral vlogs, new music, and a community that helps decide what comes next.</p>
       <div class="hero-actions">
-        <a href="#music" class="btn btn-primary">New Music Out Now</a>
-        <a href="#about" class="btn btn-ghost">Learn More</a>
+        <a href="#music" class="btn btn-primary">Listen to Camera Rolling</a>
+        <a href="#vote" class="btn btn-ghost">Vote What's Next</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -107,7 +108,7 @@
       <div class="container">
         <span class="section-label">Watch</span>
         <h2 class="section-title">Featured Video</h2>
-        <p class="section-sub">One of Rg Ng Sur's most popular builds — the chainsaw bike in action.</p>
+        <p class="section-sub">Watch one of Rg Ng Sur's most popular YouTube builds — raw chainsaw-powered motorcycle content filmed in the garage.</p>
         <div class="video-card">
           <div class="video-wrapper">
             <iframe
@@ -152,7 +153,7 @@
             <h3 class="music-title">Camera Rolling</h3>
             <p class="music-artist">Rg Ng Sur</p>
             <p class="music-desc">
-              The soundtrack to the grind. Raw, unfiltered, and built for the moments when the camera never stops — just like everything Rg Ng Sur creates.
+              The official single from Rg Ng Sur — a raw, unfiltered track built for late nights in the garage and moments when the camera never stops rolling.
             </p>
             <dl class="music-meta">
               <div class="meta-row">
@@ -186,7 +187,7 @@
       <div class="container">
         <span class="section-label">Connect</span>
         <h2 class="section-title">Social Media</h2>
-        <p class="section-sub">Find Rg Ng Sur across the platforms where the builds go viral.</p>
+        <p class="section-sub">Follow Rg Ng Sur on TikTok, YouTube, Facebook, and Instagram — tap any card to go straight to his profile.</p>
         <div class="social-grid">
           <a href="https://www.tiktok.com/@rgngsur" class="social-card" target="_blank" rel="noopener noreferrer">
             <div class="social-icon">
@@ -224,11 +225,25 @@
       </div>
     </section>
 
+    <section class="section poll" id="vote">
+      <div class="container">
+        <span class="section-label">Your Voice</span>
+        <h2 class="section-title">What Do You Want Next?</h2>
+        <p class="section-sub">Help shape the next move — vote once for more music, more vlogs, or official merch from Rg Ng Sur.</p>
+        <div class="poll-card">
+          <p class="poll-status poll-status--idle" id="pollStatus">Pick what you want to see next from Rg Ng Sur.</p>
+          <div class="poll-options" id="pollOptions" role="group" aria-label="Vote for what you want next"></div>
+          <div class="poll-results" id="pollResults" hidden></div>
+          <p class="poll-footer-note"><span id="pollTotal">0</span> total votes · one vote per device</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section contact" id="contact">
       <div class="container contact-inner">
         <span class="section-label">Get In Touch</span>
         <h2 class="section-title">Contact</h2>
-        <p class="section-sub">Business inquiries, collaborations, and fan mail — we're setting this up.</p>
+        <p class="section-sub">Business inquiries, collaborations, and press — contact details coming soon.</p>
         <div class="contact-card">
           <div class="contact-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -250,12 +265,15 @@
         <a href="#about">About</a>
         <a href="#videos">Videos</a>
         <a href="#music">Music</a>
+        <a href="#vote">Vote</a>
         <a href="#social">Social</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </footer>
 
+  <script src="poll-config.js"></script>
   <script src="script.js"></script>
+  <script src="poll.js"></script>
 </body>
 </html>
