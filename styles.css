@@ -98,6 +98,8 @@ body {
 
 .nav-toggle {
   display: none;
+  position: relative;
+  z-index: 2;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -783,11 +785,15 @@ a.social-card {
     padding: 5rem 2rem 2rem;
     background: var(--bg-elevated);
     border-left: 1px solid var(--border);
-    transition: right 0.3s ease;
+    transition: right 0.3s ease, visibility 0s linear 0.3s;
+    visibility: hidden; /* keeps closed-menu links out of tab order */
+    z-index: 1;
   }
 
   .nav-links.open {
     right: 0;
+    visibility: visible;
+    transition: right 0.3s ease;
   }
 
   .nav-links li {
@@ -821,5 +827,34 @@ a.social-card {
 
   .music-card {
     padding: 1.5rem;
+  }
+}
+/* Scroll reveal: content is visible by default; script.js adds .reveal-ready only when JS runs */
+.reveal-ready .section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-ready .section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-ready .section {
+    opacity: 1;
+    transform: none;
   }
 }
